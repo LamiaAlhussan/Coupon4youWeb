@@ -1,0 +1,27 @@
+{
+  "name": "webdevproject",
+  "version": "1.0.0",
+  "description": "web development project summer course ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Lamia / Razan group",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "jquery": "^3.7.0",
+    "mongoose": "^5.2.12",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}

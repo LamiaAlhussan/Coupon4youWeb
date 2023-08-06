@@ -1,0 +1,42 @@
+<%- include('../partials/header') -%>
+
+    <header>
+
+
+        <img src="/images/ICON.png" alt="coupon for you icon">
+
+        <a href="/coupon4you/signout">Sign out</a>
+        <p>Add new admin
+        <p>
+    </header>
+          
+    <%- include('../partials/flashMessages') -%>
+
+    <form action="/coupon4you/AddAdmin" class="post-form" method="post">
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email"
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" id="email"
+                class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" id="confirm_password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Add">
+        </div>
+    </form>
+
+    <a href="/coupon4you/services" class=" x Back-to-services">Back to Services</a>
+
+          
+    <%- include('../partials/footer') -%>

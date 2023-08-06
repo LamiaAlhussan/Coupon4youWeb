@@ -1,0 +1,63 @@
+<%- include('../partials/header') -%>
+    <header>
+
+        <img src="images/ICON.png" alt="coupon 4 you icon">
+
+       
+        <!-- <div class="search">
+            <input type="search" id="searchText" placeholder=" Search">
+            <button type="submit" id="searchButton" onclick='display()'>
+                <i class="fa fa-search" id="searchIcon"></i>
+            </button>
+        </div> -->
+
+        <div class="search">
+            <form action="/coupon4you" method="GET"> 
+              <input type="search" id="searchText" name="search" placeholder=" Search" value="<%= searchTerm %>">
+              <button type="submit" id="searchButton">
+                <i class="fa fa-search" id="searchIcon"></i>
+              </button>
+            </form>
+          </div>
+   
+    </header>
+    <%- include('../partials/flashMessages') -%>
+
+
+
+            <div class="container" id="cpnContainer">
+                <input type="hidden" id="isAdmin" data-Authorized='<%=admin%>'>
+                <% chunk.forEach((coupons)=>{%>
+
+                    <% coupons.forEach((coupon)=>{%><div class="coupon-card">
+                        <% if (admin){ %>
+                            <h6> <a href="<%= '/coupon4you/Edit/' + coupon._id%>">Edit</a></h6>
+                            <% } %>
+                            <img class="logo" src="<%= '/images/'+ coupon.img %>" alt="">
+                            <h3>
+                                <%= coupon.description%>
+                            </h3>
+                            <div class="coupon-row">
+                                <span id="cpnCode" class="cpnCode">
+                                    <%= coupon.promocode%>
+                                </span>
+                                <span id="cpnBtn" class="cpnBtn">COPY CODE</span>
+                            </div>
+                            <p>Valid Till: <%= coupon.date.toDateString()%>
+                            </p>
+                        </div>
+                        <%})%>
+
+
+                            <%})%>
+            </div>
+
+
+
+            <% if (admin){ %>
+                <a href="/coupon4you/services" class="x Back-to-services" style="position: relative; top: 10%; left: 14%; ">Back to
+                    Services</a>
+                <% } %>
+
+          
+            <%- include('../partials/footer') -%>

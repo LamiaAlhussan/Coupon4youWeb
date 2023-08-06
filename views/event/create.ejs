@@ -1,0 +1,76 @@
+<%- include('../partials/header') -%>
+    <header>
+
+
+        <img src="/images/ICON.png" alt="coupon for you icon">
+
+        <a href="/coupon4you/signout">Sign out</a>
+       <p>Add new Coupon<p>
+    </header>
+
+
+    <%- include('../partials/flashMessages') -%>
+
+    
+    <form action="/coupon4you/create" method="post" class="post-form">
+       
+       
+        <div class="form-group" enctype="multipart/form-data">
+
+            <img src="/images/unkown.png" id="picture-preview" width="250px" height="250px" style="margin-left: 33%;" alt="">
+            <p>
+                <div class="form-input">
+                <label class="img_butten" for="picture">Upload Image</label>
+                <input type="file" id="picture" name="picture" onchange="showPreview(event);" class="form-control">
+            </p></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Company:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+                <input type="text" id="description" name="description" class="form-control" required>
+        </div>
+    
+        <div class="form-group">
+
+            <label for="code">Code:</label>
+            <input type="text" id="code" name="code" class="form-control" required>
+
+        
+        </div>
+    
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <p class="center">
+                <input type="submit" value="Submit" id="addButton">
+           
+                <p> <button type="button" class="button" id="CancelBtn" value="/coupon4you/services" onclick="cancelEdit(this.value)" >Cancel</button> </p>
+                
+    
+            </p>
+        </div>
+    </form>  
+
+          
+    <%- include('../partials/footer') -%>
+
+
+
+
+                <!-- <div class="form-input">
+                    <div class="preview">
+                        <img id="picture-preview">
+                    </div>
+                    
+                    
+                    <p>
+                        <label class="img_butten" for="picture">Upload Image</label>
+                        <input type="file" id="picture" accept="image/*" onchange="showPreview(event);" class="form-control">
+                    </p>
+                    </div> -->

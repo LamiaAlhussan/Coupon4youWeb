@@ -1,0 +1,49 @@
+
+<%- include('../partials/header') -%>
+    <header>
+        <img src="/images/ICON.png" alt="coupon for you icon">
+        <a href="/coupon4you/signout">Sign out</a>
+        <p>Editing</p>
+    </header>
+    <%- include('../partials/flashMessages') -%>
+
+    <div>
+
+        <form action="/coupon4you/update" method="post" class="post-form">
+        
+            <div class="form-group" enctype="multipart/form-data">
+
+                <img src="/images/<%=coupon.img%>" id="picture-preview" width="250px" height="250px" style="margin-left: 33%;" alt="">
+                <p>
+                    <div class="form-input">
+                    <label class="img_butten" for="picture">Upload Image</label>
+                    <input type="file" id="picture" name="picture" onchange="showPreview(event);" class="form-control">
+                </p></div>
+            </div>
+            
+            <input type="hidden" id="id" name="id" value="<%= coupon._id %>">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= coupon.name %>" required>
+
+            <label for="Description">Description:</label>
+            <input type="text" id="Description" name="description" value="<%= coupon.description %>" required>
+
+            <label for="code">Code:</label>
+            <input type="text" id="code" name="code" value="<%= coupon.promocode %>" required>
+
+            <p>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" value="<%= coupon.date.toISOString().split('T')[0] %>"
+                    required>
+            </p>
+
+            <p class="center">
+                <input type="submit" value="Submit">
+            </p>
+            <p><button type="button" class="button" onclick="deleteCoupon()" id="deleteBtn" data-id="<%= coupon._id %>" >Delete Coupon</button></p>
+            <p> <button type="button" class="button" id="CancelBtn" value="/coupon4you" onclick="cancelEdit(this.value)" >Cancel</button> </p>
+
+        </form>
+    </div>
+    <%- include('../partials/footer') -%>

@@ -1,0 +1,33 @@
+<%- include('../partials/header') -%>
+    <div class="login-page">
+    <header>
+
+
+        <img src="/images/ICON.png" alt="coupon for you icon">
+
+    </header>
+    <form  action="/coupon4you/admin" method="post" style="z-index:2;" class="post-form">
+        <div style="z-index: 1;">
+            <%- include('../partials/flashMessages') -%>
+        
+        </div >
+        <h3>Log In</h3>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+    
+            <div class="form-group">
+                <input type="submit" style="margin-left: 45%;" value="Log In" >
+    
+            </div>
+    </form>
+
+</div>
+          
+<%- include('../partials/footer') -%>
+

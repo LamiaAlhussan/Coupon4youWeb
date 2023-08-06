@@ -1,0 +1,16 @@
+
+<% if (locals.error && locals.error!='' ) {%>
+
+    <div class="alert alert-danger"
+    style="text-align: center; width: 65%; height: 1%; position: relative; top: 5%; left: 17%; padding-bottom: 2%; ">
+    <%= error%>
+</div>
+<%}%>
+
+
+<% if (locals.success && locals.success!='' ) {%>    
+ <div class="alert alert-success"
+   style="text-align: center; width: 65%; height: 1%; position: relative; top: 5%; left: 17%; padding-bottom: 2%; ">
+   <%= success%>
+</div>
+<%}%>
