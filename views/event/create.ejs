@@ -12,10 +12,10 @@
     <%- include('../partials/flashMessages') -%>
 
     
-    <form action="/coupon4you/create" method="post" class="post-form">
+    <form action="/coupon4you/create" method="post" class="post-form" enctype="multipart/form-data">
        
        
-        <div class="form-group" enctype="multipart/form-data">
+        <div class="form-group">
 
             <img src="/images/unkown.png" id="picture-preview" width="250px" height="250px" style="margin-left: 33%;" alt="">
             <p>
@@ -24,7 +24,8 @@
                 <input type="file" id="picture" name="picture" onchange="showPreview(event);" class="form-control">
             </p></div>
         </div>
-        
+
+         
         <div class="form-group">
             <label for="name">Company:</label>
             <input type="text" id="name" name="name" class="form-control" required>

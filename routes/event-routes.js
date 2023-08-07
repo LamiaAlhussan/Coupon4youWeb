@@ -7,32 +7,19 @@ const { check, validationResult } = require("express-validator/check");
 const passport = require("passport");
 var isAdmin = false
 const multer = require('multer')
-
+const path = require('path')
 // pic 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, 'uploads/images')
     },
     filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now() + '.png') 
+      cb(null,file.originalname) 
     }
   })
   
-var upload = multer({ storage: storage })
+var upload = multer({ storage: storage})
 
-
-// router.post('/uploadAvatar', upload.single('avatar'), (req,res)=> {
-    
-//     let newFields = {
-//         avatar: req.file.filename
-//     }
-//     User.updateOne( {_id: req.user._id}, newFields, (err)=> {
-//         if (!err) {
-//             res.redirect('/users/profile')
-//         }
-
-//     } )
-// })
 
 
 
@@ -45,22 +32,6 @@ isAuthenticated = (req,res,next)=>{
 
 
 
-// router.get("/", (req, res) => {
-//   Coupon.find({}, (err, coupons) => {
-//     let chunk = [];
-//     let chunkSize = 3;
-//     for (let i = 0; i < coupons.length; i += chunkSize) {
-//       chunk.push(coupons.slice(i, chunkSize + i));
-//     }
-//     //  res.json (chunk)
-
-//     res.render("event/index", {
-//       chunk: chunk,
-//       success: req.flash("success"),
-//       admin : isAdmin
-//     });
-//   });
-// });
 
 router.get("/", (req, res) => {
     const searchTerm = req.query.search; 
@@ -121,10 +92,7 @@ router.get("/AddAdmin",isAuthenticated,(req, res) => {
  });
 });
 
-// router.post("/AddAdmin", (req, res) => {
-//     res.json('the new admin added ')
-//     console.log(req.body)
-//   });
+
 
 router.post(
   "/AddAdmin",
@@ -135,10 +103,7 @@ router.post(
   })
 );
 
-// router.get("/Edit", (req, res) => {
-//     console.log(req.params.id)
-//     res.render("event/edit");
-//   });
+
 
 router.get("/Edit/:id",isAuthenticated,(req, res) => {
   const couponId = req.params.id;
@@ -155,12 +120,12 @@ router.get("/Edit/:id",isAuthenticated,(req, res) => {
   });
 });
 
-router.post("/update", isAuthenticated,(req, res) => {
+router.post("/update",isAuthenticated,upload.single('picture'),(req, res) => {
 
    let newFields;
-if (req.body.picture){
+if (req.file.originalname){
   newFields = {
-    img:req.body.picture,
+    img: req.file.originalname,
     name: req.body.name,
     description: req.body.description,
     promocode: req.body.code,
@@ -194,19 +159,22 @@ router.get("/create", isAuthenticated,(req, res) => {
   res.render("event/create");
 });
 
-// router.get("/create", (req, res) => {
-//   res.render("event/create");
-// });
-// save an coupon to db
-router.post("/create", isAuthenticated,(req, res) => {
+router.post("/create",isAuthenticated,upload.single('picture'),(req, res) => {
+  console.log(req.body)
+  console.log(req.body.picture)
+  console.log()
+
   let newCoupon = new Coupon({
-    img:req.body.picture,
+    img:req.file.originalname,
     name: req.body.name,
     description: req.body.description,
     promocode: req.body.code,
     date: req.body.date,
     created_at: Date.now(),
   });
+
+  console.log(newCoupon)
+
 
   newCoupon.save((err) => {
     if (!err) {
