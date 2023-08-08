@@ -61,7 +61,7 @@
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/b15f273b-b53b-4d4d-b9e0-2969e2a6c45f"  height="300" width="700">
 </div>
 
-##### [3] Service interface for the administrator
+##### [3] Services interface for the administrator
 
 <div>
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/f0f68fff-c5ab-4521-8c1e-9e546e75690b"  height="300" width="700">
