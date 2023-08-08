@@ -182,7 +182,7 @@ header img {
         justify-content: center;
       
         align-items: center;
-        height: 100%;
+        height: 90%;
       
       
       }
@@ -299,7 +299,7 @@ textarea {
     border-radius: 5px;
 }
 
-.login-page form input[type=button]{
+/* .login-page form input[type=submit]{
     position: relative;
     background-color: #e32929;
     color: white;
@@ -309,15 +309,16 @@ textarea {
     width: 30%;
     left: 35%;
     cursor: pointer;
-    top: 50px;
+    top: 10%;
     
-}
+} */
 
 input[type="submit"],
 input[type="button"],.x,button {
     background-color: #e32929;
     color: white;
-    padding: 10px 20px;
+    padding: 1.5% 3%;
+    /* padding: 10px 20px; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -336,6 +337,7 @@ input[type="button"]:hover
     position: relative;
     background-color:#e32929 ;
     color: #ffffff;
+    padding: 1%;
     margin: 1%;
     bottom: 3%;
     left: 24%;
@@ -358,7 +360,7 @@ footer{
 }
 footer p{
     font-size: 15px;
-    margin-left: 50%;
+    margin-left: 46%;
     position: relative;
     top: 25%;
 

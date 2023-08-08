@@ -123,7 +123,7 @@ router.get("/Edit/:id",isAuthenticated,(req, res) => {
 router.post("/update",isAuthenticated,upload.single('picture'),(req, res) => {
 
    let newFields;
-if (req.file.originalname){
+if (req.file){
   newFields = {
     img: req.file.originalname,
     name: req.body.name,

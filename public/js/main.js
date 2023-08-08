@@ -19,7 +19,7 @@ function deleteCoupon() {
     axios.delete('/coupon4you/delete/'+id).then((res)=>{
        
         console.log(res.data)
-        alert('event was deleted')
+        alert('coupon was deleted')
         window.location.href ='/coupon4you'
     }).catch((err)=>{
         console.log(err)
