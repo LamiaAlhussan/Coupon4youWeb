@@ -2,10 +2,7 @@
 ### College of Computer and Information Sciences
 ### Computer Science Department
 
-
-<div>
-<img width="330" alt="image" src="https://github.com/LamiaAlhussan/WebProject/assets/109043377/bca7897e-1fff-414c-864f-11266e0c11ac">
-
+#### CS346 – Web Application Developments - Project
 
 
 |Name|Email|Academic number	Email	Name|
