@@ -2,8 +2,10 @@
     <header>
 
         <img src="images/ICON.png" alt="coupon 4 you icon">
+        <% if (admin){ %>
+        <a href="/coupon4you/signout">Sign out</a>
 
-
+            <% } %>
 
         <div class="search">
             <form action="/coupon4you" method="GET"> 
