@@ -20,7 +20,16 @@
 # Coupon 4 you
 
 #### Introduction:
-###### The website is a discount coupon aggregator that provides users with access to a wide range of discount coupons for various delivery shops, including those offering food and clothing. It aims to help users save money by offering exclusive discounts and deals on popular products and services. Additionally, the website features special admin access, allowing the administrator to add, edit, and manage the coupons available on the platform.
+###### The "Coupon 4 You" web application, a project of the Web Application Development course, simplifies online shopping by providing an intuitive platform for users to access and utilize promo codes. With a user-friendly interface, visitors can explore and copy coupons from a variety of online stores and apps. The website also offers efficient search functionality for pinpointing specific company coupons.
+
+###### Administrators are empowered to curate the coupon collection, with features for adding, editing, and deleting coupons. Accessible only to authorized administrators. This report outlines the design, development, and technical aspects of "Coupon 4 You," highlighting its role in enhancing the shopping experience and simplifying coupon management.
+
+#### Project Overview:
+###### "Coupon 4 You" is a web application developed as part of a comprehensive web application development course. The aim of this project is to create a platform where users can conveniently access and utilize promotional codes for a plethora of online stores and applications. The application is built using a stack of cutting-edge technologies including Express, Node.js, MongoDB, EJS, JavaScript, and CSS, resulting in a robust and responsive user interface.
+
+
+
+
 
 #### Key Features:
 ##### 1.Coupon Aggregation:
@@ -28,10 +37,9 @@
 ##### 2.Diverse Shop Selection:
 ###### The platform caters to a variety of delivery shops, including restaurants, fast-food chains, clothing retailers, and more. This diversity ensures that users have access to a broad range of coupons, catering to different tastes and preferences.
 ##### 3.User-Friendly Interface:
-###### The website provides a user-friendly interface that is easy to navigate. Users can quickly find relevant coupons, view details, and access the necessary information to avail themselves of the discounts. The interface is designed to enhance the user experience and encourage seamless coupon exploration.
+###### The website provides a user-friendly interface that is easy to navigate. Users can quickly find relevant coupons, view details, and access the necessary information to avail themselves of the discounts. The interface enhances the user experience and encourages seamless coupon exploration.
 ##### 4.Coupon Management:
-###### The website incorporates dedicated admin access, allowing the administrator to efficiently manage the coupons available on the platform. The admin has the authority to add new coupons, edit existing ones, and remove expired offers. This feature ensures the coupon selection.
-
+###### The website incorporates dedicated admin access, allowing the admin to manage the coupons available on the platform efficiently. The admin has the authority to add new coupons, edit existing ones, and remove expired offers.
 #### Admin Flow Chart:
 <div>
 <img src="https://github.com/LamiaAlhussan/WebProject/assets/109043377/bdfebc0d-d6e0-46ed-b533-40b11d5b707c">
@@ -61,19 +69,19 @@
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/b15f273b-b53b-4d4d-b9e0-2969e2a6c45f"  height="300" width="700">
 </div>
 
-##### [3] Service interface for the administrator
+##### [3] When the administrator logs in, it will take him/her to the services page
 
 <div>
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/f0f68fff-c5ab-4521-8c1e-9e546e75690b"  height="300" width="700">
 </div>
 
-##### [4] Coupon requirements are added by the administrator when clicking on the Add Coupon button through the services page
+##### [4] Coupon requirements are added by the Administrator when clicking the Add Coupon button through the Services page
 
 <div>
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/7dbc30b8-dc8a-4b71-80f3-c9263078c64b"  height="300" width="700">
 </div>
 
-##### [5] When clicking on the browse button, it will be transferred to the user interface to view the coupons, in addition to the appearance of the edit button to modify the coupon information
+##### [5] When clicking on the browse button, it will be transferred to the user interface to display coupons, in addition to the modification button will appear, to modify the coupon information, in addition to the return button to the services page
 
 <div>
 <img src= "https://github.com/LamiaAlhussan/WebProject/assets/109043377/8e983d70-41f0-4be9-8c12-aeb956b2365f"  height="300" width="700">
