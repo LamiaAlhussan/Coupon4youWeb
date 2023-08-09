@@ -24,6 +24,13 @@
 
 ###### Administrators are empowered to curate the coupon collection, with features for adding, editing, and deleting coupons. Accessible only to authorized administrators. This report outlines the design, development, and technical aspects of "Coupon 4 You," highlighting its role in enhancing the shopping experience and simplifying coupon management.
 
+#### Project Overview:
+###### "Coupon 4 You" is a web application developed as part of a comprehensive web application development course. The aim of this project is to create a platform where users can conveniently access and utilize promotional codes for a plethora of online stores and applications. The application is built using a stack of cutting-edge technologies including Express, Node.js, MongoDB, EJS, JavaScript, and CSS, resulting in a robust and responsive user interface.
+
+
+
+
+
 #### Key Features:
 ##### 1.Coupon Aggregation:
 ###### The website serves as a central hub for discount coupons, bringing together offers from different delivery shops. Users can easily browse and search for coupons based on their preferences, such as specific shops or categories like food or clothing.
