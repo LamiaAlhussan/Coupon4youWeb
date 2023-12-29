@@ -1,19 +1,3 @@
-### Al Imam Mohammad ibn Saud University
-### College of Computer and Information Sciences
-### Computer Science Department
-
-#### CS346 – Web Application Developments - Project
-
-
-|Name|Email|Academic number	Email	Name|
-|:--------|:----------|:----------|
-|Lamia Mohammed Alhussan|441021239@sm.imamu.edu.sa|441021239|
-|Razan Fahad Alhussainan|441021368@sm.imamu.edu.sa|441021368|
-
-|Section|371|
-|:----|:----|
-|Instructor|Dr. Fahman Ali Esamil Saeed|
-
 # Coupon 4 you
 
 #### Introduction:
